@@ -8,7 +8,7 @@ def populate_status(apps, schemaeditor):
         "draft":"A post only visible tot he author",
         "archived":"An older post, visible to logged in users"
     }
-    Status = apps.get_model("posts", "status")
+    Status = apps.get_model("posts", "Status")
     for key, value in entries.items():
         status_obj = Status(name=key, description=value)
         status_obj.save()
